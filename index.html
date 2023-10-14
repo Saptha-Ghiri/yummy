@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Home</title>
+    <style>
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .ball {
+            -webkit-animation-name: bounce;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: cubic-bezier(
+            .5, 0.05, 1, .5);
+            -webkit-animation-iteration-count: infinite;
+        }
+          
+        @-webkit-keyframes bounce {
+            from {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            to {
+                -webkit-transform: translate3d(0, 100px, 0);
+                transform: translate3d(0, 100px, 0);
+            }
+        }
+        #load{
+            z-index: 10;
+        }
+        .nav:hover{
+            font-size: 20px;
+            transition-delay: 500ms;
+            transition-timing-function: ease-in-out;
+        }
+        .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="w-full h-screen bg-white fixed flex items-center justify-center z-50" id="load">
+        <img src="img/logo-1-removebg.png" alt="" class="w-48 h-48 ball">
+    </div>
+    <div class="bg-cover bg-center h-screen items-center justify-center"
+        style="background-image: url('img/bg-1.avif');">
+        <nav class="bg-opacity z-1 bg-opacity-0 text-white p-2 flex justify-between sticky">
+            <div>
+            <a href=""><img src="img/logo-1-removebg.png" alt="" class="w-20 h-20 flex ml-4" ></a></div>
+            <div class="flex justify-between items-center space-x-5 mr-20">
+            <a  href="index.html"><li class="nav p-5 text-lg transition duration-300 ease-in-out list-none">Home</li></a>
+            <a  href="signup.html"><li class="nav p-5 text-lg transition duration-300 ease-in-out list-none">Sign Up</li></a>
+            <a  href="login.html"><li class="nav p-5 text-lg transition duration-300 ease-in-out list-none">Log In</li></a>
+        </div>
+        </nav>
+        <!--<img src="img/bg-1.avif" alt="" class="object-fill w-full top-0 z-0">-->
+        <div class="center top-1/2 left-1/2 absolute text-white items-center justify-center text-center translate-y-2/4 translate-x-2/4 ">
+       <h1 class="font-serif font text-5xl italic">YUMMY</h1>
+            <h3>Find the best restaurants, cafés and bars in India</h3>
+        </div>
+    </div>
+    <script>
+        
+        setTimeout(function(){ 
+       $("#load").hide();
+}, 1500);
+  
+    </script>
+</body>
+</html>

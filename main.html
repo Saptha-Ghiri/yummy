@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Home</title>
+    <style>
+        .sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .ball {
+            -webkit-animation-name: bounce;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes bounce {
+            from {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 100px, 0);
+                transform: translate3d(0, 100px, 0);
+            }
+        }
+
+        #load {
+            z-index: 10;
+        }
+
+        .nav:hover {
+            font-size: 20px;
+            transition-delay: 500ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+</head>
+
+<body class="relative">
+    <div class="w-full h-screen bg-white fixed flex items-center justify-center z-50" id="load">
+        <img src="img/logo-1-removebg.png" alt="" class="w-48 h-48 ball">
+    </div>
+
+    <div class="flex place-content-around">
+        <div class="flex space-x-24 mt-5">
+        <a href="/index.html"><img class="w-20 h-20" src="img/logo-1-removebg.png" alt=""></a>
+        <div class="bg-gray-200 w-96 flex rounded justify-center text-center items-center pt-2 pb-2 pl-4 pr-4 space-x-4" >
+                <select id="ticket-price" name="ticket-price" class="border border-gray-300 rounded-md p-2 w-full outline-none">
+                    <option class="text-black" value="option1">Location</option>
+                    <option class="text-black" value="option1">Trichy</option>
+                    <option class="text-black" value="option2">Chennai</option>
+                </select>
+                <div class="flex bg-white justify-center items-center text-center rounded pl-2 op">
+            <section class="opacity-60"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg>  </section>      
+            <input type="tel" id="phone" name="phone" class="border-none border-gray-300 rounded-md h-10 p-2 outline-none" required>
+        </div>
+        </div>
+        <div class="flex justify-center items-center text-center space-x-5">
+            <img class="w-16 h-16" src="/img/pro.avif" alt="">
+            <h1>Saptha Ghiri K</h1>
+            <a href="login.html"><h4 class="text-blue-600">Log Out</h4></a>
+        </div>
+    </div>
+    </div>
+    <div class="bg-gray-100 w-full p-5 mt-5">
+        <h1 class="text-3xl font-semibold">Category </h1>
+        <div class="flex place-content-evenly mt-10 text-center">
+            <section><img src="img/category/1.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Biriyani</p></section>
+            <section><img src="img/category/3.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Pizza</p></section>
+            <section><img src="img/category/4.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Fried Rice</p></section>
+            <section><img src="img/category/5.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Paratha</p></section>
+            <section><img src="img/category/6.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Idli</p></section>
+            <section><img src="img/category/7.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Dosa</p></section>
+        </div>
+    </div>
+    <div>
+        <h1 class="text-3xl m-4">Top Brand For You</h1>
+        <div class="flex place-content-evenly m-10 text-center">
+            <section><img src="img/brand/1.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>KFC</p></section>
+            <section><img src="img/brand/3.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Ezham Suvai</p></section>
+            <section><img src="img/brand/4.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Domino's Pizza</p></section>
+            <section><img src="img/brand/5.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Oyalo Pizza</p></section>
+            <section><img src="img/brand/6.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Dindigul Thalappakatti</p></section>
+            <section><img src="img/brand/7.avif" alt="" class="w-40 h-40 rounded-full font-semibold"><p>Pizza Hut</p></section>
+        </div>
+    </div>
+    <div class="m-4 flex-col">
+        <h1 class="text-3xl">Best foods</h1>
+        <div class="flex place-content-evenly my-5">
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/1.avif" alt="" class="h-60 w-96 object-cover rounded-xl"><h1>Gajapriya`s New Victorya Non Veg Restaurant</h1><p class="opacity-40">North Indian, South Indian, Biryani</p></section>
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/2.avif" alt="" class="h-60 w-96 object-cover rounded-xl"><h1>Madurai Tastee Mess</h1><p class="opacity-40">Chinese, South Indian, North Indian</p></section>
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/3.avif" alt="" class="h-60 w-96 object-cover rounded-xl"><h1>KMS Hakkim Kalyana Biriyani Restaurant</h1><p class="opacity-40">Biryani, North Indian, Chinese, South Indian, Sichuan</p></section>
+        </div>
+        <div class="flex place-content-evenly my-5">
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/4.avif" alt="" class="h-60 w-96  object-cover rounded-xl"><h1>Banana Leaf Restaurant</h1><p class="opacity-40">North Indian, Mughlai, Fast Food, Seafood,...</p></section>
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/5.avif" alt="" class="h-60 w-96  object-cover rounded-xl"><h1>Domino's Pizza</h1><p class="opacity-40">Pizza, Italian, Pasta, Fast Food, Desserts</p></section>
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/6.avif" alt="" class="h-60 w-96  object-cover rounded-xl"><h1>Best Bites</h1><p class="opacity-40">Pizza, Burger, Fast Food, Shawarma, Beverages</p></section>
+        </div>
+        <div class="flex place-content-evenly my-5">
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/7.avif" alt="" class="h-60 w-96  object-cover rounded-xl"><h1>Hotel Kannappa</h1><p class="opacity-40">Chettinad, Chinese, South Indian, North Indian,....</p></section>
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/8.avif" alt="" class="h-60 w-96  object-cover rounded-xl"><h1>KFC</h1><p class="opacity-40">Burger, Fast Food, Biryani, Desserts, Beverages</p></section>
+            <section class="m-2 p-4 flex-col items-center text-left hover:shadow rounded-lg drop-shadow-2xl transition duration-200 ease-in-out "><img src="img/foods/9.avif" alt="" class="h-60 w-96  object-cover rounded-xl"><h1>Suvai Briyani Family Restaurant</h1><p class="opacity-40">Biryani</p></section>
+        </div>
+    <div class="fixed bottom-5 right-5 z-50 cursor-pointer text-white bg-red-700 rounded-full shadow drop-shadow-2xl" id="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m12 10.8l-4.6 4.6L6 14l6-6l6 6l-1.4 1.4l-4.6-4.6Z"/>
+        </svg>
+    </div>
+    <script>
+    $(document).ready(function () {
+        $("#scroll-to-top").hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $("#scroll-to-top").fadeIn();
+            } else {
+                $("#scroll-to-top").fadeOut();
+            }
+        });
+        $("#scroll-to-top").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+    });
+        setTimeout(function () {
+            $("#load").hide();
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
